@@ -2,3 +2,5 @@
 venv/
 sourse/
 .env
+music.drawio
+.$music.drawio.bkp
