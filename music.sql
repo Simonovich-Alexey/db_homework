@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS song (
 CREATE TABLE IF NOT EXISTS collection (
 	collection_id SERIAL PRIMARY KEY,
 	name_collection VARCHAR(120) NOT NULL,
-	year_release TIMESTAMP CHECK (EXTRACT(YEAR FROM year_release) >= 1800) not NULL
+	year_release TIMESTAMP CHECK (EXTRACT(YEAR FROM year_release) >= 1800) NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS collection_song (
