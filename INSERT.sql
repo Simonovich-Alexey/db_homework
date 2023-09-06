@@ -1,88 +1,104 @@
-INSERT INTO genre VALUES(1, 'Рок');
-INSERT INTO genre VALUES(2, 'Хип-хоп');
-INSERT INTO genre VALUES(3, 'Поп-музыка');
-INSERT INTO genre VALUES(4, 'Драм-н-бейс');
-INSERT INTO genre VALUES(5, 'Джаз');
+INSERT INTO genre
+VALUES
+(1, 'Рок'),
+(2, 'Хип-хоп'),
+(3, 'Поп-музыка'),
+(4, 'Драм-н-бейс'),
+(5, 'Джаз');
 
-INSERT INTO singer VALUES(1, 'Рэй Чарльз');
-INSERT INTO singer VALUES(2, 'Джеймс Браун');
-INSERT INTO singer VALUES(3, 'Jay-Z');
-INSERT INTO singer VALUES(4, 'Eminem');
-INSERT INTO singer VALUES(5, 'Drake');
-INSERT INTO singer VALUES(6, 'JONY');
-INSERT INTO singer VALUES(7, 'Руки вверх');
-INSERT INTO singer VALUES(8, 'Lady Gaga');
-INSERT INTO singer VALUES(9, 'Pendulum');
-INSERT INTO singer VALUES(10, 'Sub Focus');
-INSERT INTO singer VALUES(11, 'Linkin Park');
-INSERT INTO singer VALUES(12, 'U2');
-INSERT INTO singer VALUES(13, 'The Rolling Stones');
+INSERT INTO singer
+VALUES
+(1, 'Рэй Чарльз'),
+(2, 'Джеймс Браун'),
+(3, 'Jay-Z'),
+(4, 'Eminem'),
+(5, 'Drake'),
+(6, 'JONY'),
+(7, 'Руки вверх'),
+(8, 'Lady Gaga'),
+(9, 'Pendulum'),
+(10, 'Sub Focus'),
+(11, 'Linkin Park'),
+(12, 'U2'),
+(13, 'The Rolling Stones');
 
-INSERT INTO genre_singer VALUES(1, 1, 11);
-INSERT INTO genre_singer VALUES(2, 1, 12);
-INSERT INTO genre_singer VALUES(3, 1, 13);
-INSERT INTO genre_singer VALUES(4, 2, 3);
-INSERT INTO genre_singer VALUES(5, 2, 4);
-INSERT INTO genre_singer VALUES(6, 2, 5);
-INSERT INTO genre_singer VALUES(7, 3, 6);
-INSERT INTO genre_singer VALUES(8, 3, 7);
-INSERT INTO genre_singer VALUES(9, 3, 8);
-INSERT INTO genre_singer VALUES(10, 4, 9);
-INSERT INTO genre_singer VALUES(11, 4, 10);
-INSERT INTO genre_singer VALUES(12, 5, 1);
-INSERT INTO genre_singer VALUES(13, 5, 2);
+INSERT INTO genre_singer
+VALUES
+(1, 1, 11),
+(2, 1, 12),
+(3, 1, 13),
+(4, 2, 3),
+(5, 2, 4),
+(6, 2, 5),
+(7, 3, 6),
+(8, 3, 7),
+(9, 3, 8),
+(10, 4, 9),
+(11, 4, 10),
+(12, 5, 1),
+(13, 5, 2);
 
-INSERT INTO album VALUES(1, 'The Rolling Stones', '1964-01-05');
-INSERT INTO album VALUES(2, 'Breaking the Habit', '2004-01-06');
-INSERT INTO album VALUES(3, 'Revival', '2017-02-11');
-INSERT INTO album VALUES(4, 'Ray Charles', '1957-04-15');
-INSERT INTO album VALUES(5, 'The Black Album', '2003-05-11');
-INSERT INTO album VALUES(6, 'The Fame', '2008-11-07');
-INSERT INTO album VALUES(7, 'Без тормозов', '1999-06-07');
-INSERT INTO album VALUES(8, 'Небесные розы', '2020-05-17');
-INSERT INTO album VALUES(9, 'Partals', '2020-04-22');
-INSERT INTO album VALUES(10, 'The Joshua Tree', '1987-11-03');
-INSERT INTO album VALUES(11, 'Sex Machine', '1970-02-08');
-INSERT INTO album VALUES(12, 'Scorpion', '2018-08-19');
-INSERT INTO album VALUES(13, 'The Reworks', '2018-12-25');
+INSERT INTO album
+VALUES
+(1, 'The Rolling Stones', '1964-01-05'),
+(2, 'Breaking the Habit', '2004-01-06'),
+(3, 'Revival', '2017-02-11'),
+(4, 'Ray Charles', '1957-04-15'),
+(5, 'The Black Album', '2003-05-11'),
+(6, 'The Fame', '2008-11-07'),
+(7, 'Без тормозов', '1999-06-07'),
+(8, 'Небесные розы', '2020-05-17'),
+(9, 'Partals', '2020-04-22'),
+(10, 'The Joshua Tree', '1987-11-03'),
+(11, 'Sex Machine', '1970-02-08'),
+(12, 'Scorpion', '2018-08-19'),
+(13, 'The Reworks', '2018-12-25');
 
-INSERT INTO singer_album VALUES(1, 1, 4);
-INSERT INTO singer_album VALUES(2, 2, 11);
-INSERT INTO singer_album VALUES(3, 3, 5);
-INSERT INTO singer_album VALUES(4, 4, 3);
-INSERT INTO singer_album VALUES(5, 5, 12);
-INSERT INTO singer_album VALUES(6, 6, 8);
-INSERT INTO singer_album VALUES(7, 7, 7);
-INSERT INTO singer_album VALUES(8, 8, 6);
-INSERT INTO singer_album VALUES(9, 9, 13);
-INSERT INTO singer_album VALUES(10, 10, 9);
-INSERT INTO singer_album VALUES(11, 11, 2);
-INSERT INTO singer_album VALUES(12, 12, 10);
-INSERT INTO singer_album VALUES(13, 13, 1);
+INSERT INTO singer_album
+VALUES
+(1, 1, 4),
+(2, 2, 11),
+(3, 3, 5),
+(4, 4, 3),
+(5, 5, 12),
+(6, 6, 8),
+(7, 7, 7),
+(8, 8, 6),
+(9, 9, 13),
+(10, 10, 9),
+(11, 11, 2),
+(12, 12, 10),
+(13, 13, 1);
 
-INSERT INTO song VALUES(1, 12, 'After Dark', 290);
-INSERT INTO song VALUES(2, 11, 'Mother Popcorn', 351);
-INSERT INTO song VALUES(3, 10, 'Exit', 293);
-INSERT INTO song VALUES(4, 9, 'Freedom', 243);
-INSERT INTO song VALUES(5, 8, 'Небесные розы', 181);
-INSERT INTO song VALUES(6, 7, 'Атаман', 217);
-INSERT INTO song VALUES(7, 6, 'Paparazzi', 208);
-INSERT INTO song VALUES(8, 5, 'Allure', 292);
-INSERT INTO song VALUES(9, 4, 'I Got a Woman', 173);
-INSERT INTO song VALUES(10, 3, 'River', 221);
-INSERT INTO song VALUES(11, 2, 'Breaking the Habit', 290);
-INSERT INTO song VALUES(12, 1, 'Road Runner', 183);
-INSERT INTO song VALUES(13, 13, 'The Island', 233);
+INSERT INTO song
+VALUES
+(1, 12, 'After Dark', 290),
+(2, 11, 'Mother Popcorn', 351),
+(3, 10, 'Exit', 293),
+(4, 9, 'Freedom', 243),
+(5, 8, 'Небесные розы', 181),
+(6, 7, 'Атаман', 217),
+(7, 6, 'Paparazzi', 208),
+(8, 5, 'Allure', 292),
+(9, 4, 'I Got a Woman', 173),
+(10, 3, 'River', 221),
+(11, 2, 'Breaking the Habit', 290),
+(12, 1, 'Road Runner', 183),
+(13, 13, 'The Island', 233);
 
-INSERT INTO collection VALUES(1, 'Хиты', '1999-12-10');
-INSERT INTO collection VALUES(2, 'Лето 2023', '2023-09-25');
-INSERT INTO collection VALUES(3, 'Рок жив', '2019-01-02');
-INSERT INTO collection VALUES(4, 'Ретро', '2010-05-11');
+INSERT INTO collection
+VALUES
+(1, 'Хиты', '1999-12-10'),
+(2, 'Лето 2023', '2023-09-25'),
+(3, 'Рок жив', '2019-01-02'),
+(4, 'Ретро', '2010-05-11');
 
-INSERT INTO collection_song VALUES(1, 1, 6);
-INSERT INTO collection_song VALUES(2, 1, 2);
-INSERT INTO collection_song VALUES(3, 2, 5);
-INSERT INTO collection_song VALUES(4, 2, 7);
-INSERT INTO collection_song VALUES(5, 3, 12);
-INSERT INTO collection_song VALUES(6, 3, 11);
-INSERT INTO collection_song VALUES(7, 4, 9);
+INSERT INTO collection_song
+VALUES
+(1, 1, 6),
+(2, 1, 2),
+(3, 2, 5),
+(4, 2, 7),
+(5, 3, 12),
+(6, 3, 11),
+(7, 4, 9);
