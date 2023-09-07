@@ -36,7 +36,9 @@ VALUES
 (10, 4, 9),
 (11, 4, 10),
 (12, 5, 1),
-(13, 5, 2);
+(13, 5, 2),
+(14, 3, 5),
+(15, 3, 4);
 
 INSERT INTO album
 VALUES
@@ -84,7 +86,9 @@ VALUES
 (10, 3, 'River', 221),
 (11, 2, 'Breaking the Habit', 290),
 (12, 1, 'Road Runner', 183),
-(13, 13, 'The Island', 233);
+(13, 13, 'The Island', 233),
+(14, 2, 'In The End', 263),
+(15, 8, 'Небесные розы v.2', 210);
 
 INSERT INTO collection
 VALUES
@@ -101,4 +105,5 @@ VALUES
 (4, 2, 7),
 (5, 3, 12),
 (6, 3, 11),
-(7, 4, 9);
+(7, 4, 9),
+(8, 2, 14);
