@@ -69,8 +69,7 @@ HAVING cs.collection_id IS NULL;
 SELECT name_singer FROM singer s
 JOIN singer_album sa ON s.singer_id = sa.singer_id
 JOIN song s2 ON sa.album_id = s2.album_id
-WHERE s2.duration = (SELECT MIN(duration) FROM song)
-;
+WHERE s2.duration = (SELECT MIN(duration) FROM song);
 
 --Задание 4.4
 SELECT name_album FROM album a
