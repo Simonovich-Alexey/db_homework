@@ -17,8 +17,12 @@ SELECT name_singer FROM singer
 WHERE name_singer NOT LIKE '% %';
 
 --Задание 2.5
+----Вариант 1
 SELECT name_song FROM song
-WHERE name_song iLIKE '%my%' OR name_song iLIKE '%мой%';
+WHERE string_to_array(lower(name_song), ' ') && ARRAY['my', 'мой'];
+----Вариант 2
+SELECT name_song FROM song
+WHERE name_song ~* '(^|\s)(my|мой)(\s|$)';
 
 --Задание 3.1
 SELECT name_genre, COUNT(gs.genre_id) FROM genre g
@@ -26,10 +30,9 @@ JOIN genre_singer gs ON g.genre_id  = gs.genre_id
 GROUP BY name_genre, gs.genre_id;
 
 --Задание 3.2
-SELECT name_album, COUNT(s.album_id) FROM album a
+SELECT COUNT(s.album_id) FROM album a
 JOIN song s ON a.album_id = s.album_id
-WHERE EXTRACT(YEAR FROM a.year_release) BETWEEN '2019' AND '2020'
-GROUP BY name_album;
+WHERE EXTRACT(YEAR FROM a.year_release) BETWEEN '2019' AND '2020';
 
 --Задание 3.3
 SELECT name_album, AVG(s.duration) FROM album a
@@ -53,11 +56,11 @@ JOIN singer s2 ON sa.singer_id = s2.singer_id
 WHERE s2.name_singer = 'Linkin Park';
 
 --Задание 4.1
-SELECT name_album FROM album a
+SELECT DISTINCT name_album FROM album a
 JOIN singer_album sa ON a.album_id = sa.album_id
 JOIN genre_singer gs ON sa.singer_id = gs.singer_id
-GROUP BY name_album 
-HAVING COUNT(*) > 1;
+GROUP BY a.name_album, sa.album_id, gs.singer_id 
+HAVING COUNT(gs.genre_id) > 1;
 
 --Задание 4.2
 SELECT name_song FROM song s
